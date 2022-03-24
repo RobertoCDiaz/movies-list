@@ -1,38 +1,135 @@
+:root {
+    --bg-color: #1D1D1D;
+    --gray-bg-color: #2F2F2F;
+    --accent-color: #0A84FF;
+    --gray-color: #C4C4C4;
+}
+
+/* roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html, body, #root, .App {
+    background-color: var(--bg-color);
+    color: white;
+    height: 100%;
+}
+
 .App {
-  text-align: center;
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Sidebar {
+    background-color: var(--gray-bg-color);
+    /* padding: 4em 2em; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Sidebar * {
+    text-align: start;
+    font-weight: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Sidebar h1 {
+    margin: 64px 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.Sidebar .tag {
+    padding: 8px 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Sidebar .tag:hover {
+    background-color: rgba(255, 255, 255, .5);
+    cursor: pointer;
 }
+
+.Sidebar .button {
+    background-color: var(--accent-color);
+    margin: 32px 32px;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Main {
+    padding: 64px 128px;
+    /* flex-grow: 1; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.Main .tag-header {
+    margin: 32px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Main .tag-header .header {
+    flex-grow: 1;
+}
+
+.Main .tag-header .material-icons {
+    margin-left: 16px;
+    font-size: 1.75em;
+}
+
+.Main .search-bar {
+    padding: 8px 32px;
+    border-radius: 4px;
+    border: 0;
+}
+
+.Main .search-bar {
+    border: 0;
+}
+
+.Catalog {
+    margin: 32px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 2%;
+    align-content: stretch;
+}
+
+.Movie {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0,0.5) 58%, rgba(255,255,255,0) 100%);     
+}
+
+.Movie .title {
+    position: absolute;
+    bottom: 0;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.Movie img {
+    width: 128px;
+    height: 192px;
+}
+
+/* * {
+    border: 1px solid red;
+} */
