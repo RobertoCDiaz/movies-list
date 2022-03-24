@@ -1,6 +1,11 @@
+import { useNavigate } from 'react-router-dom';
+
 const Movie = ({ title, watched }) => {
+    const navigate = useNavigate();
+
     const handleClick = () => {
-        
+        // TODO: Redirect to real movie
+        navigate('/movie/123');
     };
 
     return (

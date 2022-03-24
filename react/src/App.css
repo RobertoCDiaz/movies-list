@@ -61,7 +61,7 @@ html, body, #root, .App {
     cursor: pointer;
 }
 
-.Main {
+.Main, .MoviePage {
     padding: 64px 128px;
     /* flex-grow: 1; */
     width: 80%;
@@ -148,6 +148,73 @@ html, body, #root, .App {
 .Movie.watched .gradient {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 0.5) 100%);     
+}
+
+.MoviePage .details {
+    display: flex;
+    flex-direction: row;
+    column-gap: 32px;
+}
+
+.MoviePage .details img {
+    width: 284px;
+    height: 426px;
+    border-radius: 8px;
+}
+
+.MoviePage .details .info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.MoviePage .details .info .description {
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.MoviePage .details .info .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+.MoviePage .details .info .options .button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 32px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.MoviePage .details .info .options .button.primary {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.MoviePage .where-to-watch {
+    margin: 64px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: stretch;
+}
+
+.MoviePage .where-to-watch .title {
+    text-align: center;
+}
+
+.MoviePage .where-to-watch .platforms {
+    background-color: var(--gray-bg-color);
+    padding: 16px 128px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /* * {
