@@ -1,4 +1,6 @@
 import Catalog from "./Catalog";
+import Popup from "./Popup";
+import FilterPopupContent from "./popups/FilterPopupContent";
 import Searchbar from "./Searchbar";
 
 const Main = () => {
@@ -12,9 +14,12 @@ const Main = () => {
                     <p>This is @robertodiaz's whole pending movies list</p>
                 </div>
 
-                <span className="material-icons">
-                    filter_list
-                </span>
+                <Popup
+                    content={<span className="material-icons">
+                                filter_list
+                    </span>}
+                    dialog={<FilterPopupContent/>}
+                />
                 <span className="material-icons">
                     settings
                 </span>

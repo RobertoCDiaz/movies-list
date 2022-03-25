@@ -157,8 +157,9 @@ html, body, #root, .App {
 }
 
 .MoviePage .details img {
-    width: 284px;
-    height: 426px;
+    width: 228px;
+    /* width: 284px;
+    height: 426px; */
     border-radius: 8px;
 }
 
@@ -191,9 +192,18 @@ html, body, #root, .App {
     border: 1px solid white;
 }
 
+.MoviePage .details .info .options .button:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
 .MoviePage .details .info .options .button.primary {
     background-color: var(--accent-color);
     border: none;
+}
+
+.MoviePage .details .info .options .button.primary:hover {
+    background-color: white;
+    color: var(--accent-color);
 }
 
 .MoviePage .where-to-watch {
@@ -215,6 +225,43 @@ html, body, #root, .App {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.Popup {
+    position: relative;
+}
+
+.PopupContent {
+    position: absolute;
+    right: 0;
+    background-color: var(--gray-bg-color);
+    padding: 32px;
+    border-radius: 4px;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.PopupContent.hidden {
+    visibility: hidden;
+}
+
+.FilterPopupContent .title  {
+    text-align: center;
+}
+
+.FilterPopupContent .platforms  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    column-gap: 32px;
+}
+
+.FilterPopupContent .platforms .platform-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* * {
