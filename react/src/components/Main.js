@@ -1,6 +1,7 @@
 import Catalog from "./Catalog";
 import Popup from "./Popup";
 import FilterPopupContent from "./popups/FilterPopupContent";
+import SettingsPopupContent from "./popups/SettingsPopupContent";
 import Searchbar from "./Searchbar";
 
 const Main = () => {
@@ -20,9 +21,14 @@ const Main = () => {
                     </span>}
                     dialog={<FilterPopupContent/>}
                 />
-                <span className="material-icons">
-                    settings
-                </span>
+                
+                <Popup 
+                    content={<span className="material-icons">
+                        settings
+                    </span>}
+                    dialog={<SettingsPopupContent />}/>
+
+                
 
             </div>
             
