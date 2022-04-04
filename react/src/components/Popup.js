@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Popup = ({ content, dialog }) => {
+const Popup = ({ content, dialog, global = false }) => {
     const [dialogHidden, setDialogHidden] = useState(true);
 
     const handleOnClick = () => {
@@ -12,7 +12,8 @@ const Popup = ({ content, dialog }) => {
             <div onClick={handleOnClick}>
                 {content}
             </div>
-            <div className={`PopupContent ${dialogHidden ? 'hidden' : ''}`}>
+            <div 
+                className={`PopupContent ${dialogHidden ? 'hidden' : ''} ${global ? 'globalDialog' : ''}`}>
                 {dialog}
             </div>
         </div>

@@ -47,6 +47,11 @@ html, body, #root, .App {
     padding: 8px 32px;
 }
 
+.Sidebar .tag.selected {
+    font-weight: bold;
+    border-left: 4px solid white;
+}
+
 .Sidebar .tag:hover {
     background-color: rgba(255, 255, 255, .5);
     cursor: pointer;
@@ -59,6 +64,40 @@ html, body, #root, .App {
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
+}
+
+.Sidebar .main-content {
+    flex-grow: 1;
+}
+
+.Sidebar .SidebarSession {
+    padding: 16px;
+}
+
+.Sidebar .SidebarSession * {
+    text-align: center;
+}
+
+.Sidebar .SidebarSession .logged-in {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sidebar .SidebarSession .logout {
+    padding: 4px;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-top: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.Sidebar .SidebarSession .logout:hover {
+    background-color: rgba(255, 255, 255, .5);
 }
 
 .Main, .MoviePage {
@@ -251,6 +290,13 @@ html, body, #root, .App {
     visibility: hidden;
 }
 
+.PopupContent.globalDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .FilterPopupContent .title  {
     text-align: center;
 }
@@ -298,6 +344,43 @@ html, body, #root, .App {
     font-weight: bold;
     border-radius: 4px;
     text-align: center;
+}
+
+.LoginPopupContent { 
+    padding: 16px 0 32px;
+}
+
+.LoginPopupContent .title {
+    border-bottom: 1px solid white;
+    padding-bottom: 16px;
+    margin: 0;
+    margin-bottom: 48px;
+    font-size: 2.2em;
+}
+
+.LoginPopupContent .form {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.LoginPopupContent .inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin: 16px 0;
+}
+
+.LoginPopupContent .inputs * {
+    text-align: start;
+}
+
+.LoginPopupContent input{
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.LoginPopupContent .button{
+    margin: 0;
 }
 
 /* * {
